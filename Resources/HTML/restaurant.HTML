@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Picker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- With width=device-width we will use our device width, making the app fit the whole size of the device without being
+    squeezed. The initial-scale property controls the zoom level when the page is first loaded and we will set it to 1,
+    meaning no zoom in or out when page is loaded. -->
+
+    <link rel="stylesheet" href="./Resources/CSS/jquery.mobile.structure-1.0.1.css" />
+    <link rel="stylesheet" href="./Resources/CSS/jquery.mobile-1.0.1.css" />
+    <script src="./Resources/JS/jquery-1.7.1.min.js"></script>
+    <script src="./Resources/JS/jquery.mobile-1.0.1.min.js"></script>
+</head>
+
+<body>
+    <div id="restau" data-role="page" data-add-back-btn="true" data-theme="d">
+        <div data-role="header">
+            <h1> Restaurant Picker</h1>
+        </div>
+        <div data-role="content">
+
+            <div class="ui-grid-a" id="restau_infos">
+                <div class="ui-block-a">
+                    <h1> Le Mouffetard</h1>
+                    <p><strong> Restaurant bar in the center of Strasbourg</strong></p>
+                    <p>On the menu: </p>
+                    <ul>
+                        <li> Milkshake with chocolat</li>
+                        <li> Planchettes </li>
+                        <li> Leek pie </li>
+                    </ul>
+                </div>
+
+                <div class="ui-grid-b">
+                    <p><img src="../Images/restau01.jpg" alt="jeannette photo"></p>
+                    <p><a href="http://www.google.fr" rel="external" data-role="button">See our website</a></p>
+                </div>
+            </div> <!-- /grid-a -->
+
+            <hr />
+
+            <div class="ui-grid-a" id="contact_infos">
+                <div class="ui-block-a">
+                    <h2>Contact us</h2>
+                    <p>30 Rue des Tonneliers</p>
+                    <p> 67000 Strasbourg </p>
+                </div>
+
+                <div class="ui-block-b">
+                    <img src="../Images/01_maps.jpg" alt="plan jeanette" />
+                </div>
+            </div> <!-- /grid-a -->
+
+            <div id="contact_buttons">
+                <a href="http://maps.google.fr/maps?q=jeannette+et+les+cycleux&hl=fr&sll=46.75984,1.738281&sspn=10.221882,18.764648&hq=jeannette+et+les+cycleux&t=m&z=13&iwloc=A"
+                    data-role="button" data-icon="maps">Find us on Google Maps</a>
+                <a href="tel:0388161072"  data-role="button" data-icon="tel"> Call us </a>
+            </div>
+
+            <hr/>
+
+            <div id="notation" > <!-- data-role="controlgroup || fieldcontain" -->
+                <form>
+                    <label for="select-choice-0" class="select"> <h2>User rating</h2></label>
+                    <select name="select-choice-0" id="select-choice-0" data-native-menu="false"  data-theme="e">
+                         <!-- To use custom menus on a specific select, just add the data-native-menu="false" attribute -->
+                         <!-- The data-native-menu=”false” enables us to style the select using jQuery Mobile, so that we will be able to add some nice stars here too. -->
+                            <option value="one" class="one"> Not good at all </option>
+                            <option value="two" class="two">Average </option>
+                            <option value="three" class="three">Pretty good </option>
+                            <option value="four" class="four"> Excellent </option>
+                    </select>
+                </form>
+            </div>
+
+        </div>
+    </div>  <!-- /page -->
+</body>
+
+</html>
+
+<!-- note_utilisateur -->
